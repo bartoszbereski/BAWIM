@@ -40,7 +40,7 @@ Po instalacji wszystkich 3 rzeczy możemy przejść do części praktycznej nasz
 </html>
 ```
 Po uruchomieniu tego kodu powiniśmy otrzymać status, że zadanie zostało wykonane poprawnie. Dodatkowo zwrócona została wartość liczoba flagi, którą musimy wkleić do formularza.
-![App Screenshot](https://snipboard.io/CZyGlD.jpg)
+<br>![App Screenshot](https://snipboard.io/CZyGlD.jpg)
 
 ### ZADANIE 2
 1. Na początku możemy włączyć konsolę [f12] i zaobserwować zapytania wysyłane poprzez formularz z opiniami. Gdy dodamy opinię powiniśmy zauważyć wysłane zapytanie metodą POST. 
@@ -87,3 +87,19 @@ Po uruchomieniu tego kodu powiniśmy otrzymać status, że zadanie zostało wyko
 
 6. Próbujemy zamaskować typ z json aby był traktowany jako zwykły tekst, dlatego używamy takiego sposobu przekazania parametrów. Parametr ignore_me jest używany w celu ominięcia problemu w którym jest to traktowane jako json.
 
+### ZADANIE 4
+1. Uruchamiamy oprogramowanie Burp Suite Community Edition, ustawiamy serwer proxy w ustawieniach windowsa i otwieramy odpowiednią przeglądarke (dokładna instrukcja konfiguracji na Upelu przedmiotu, zakładka "Zajęcia laboratoryjne numer 2")
+
+2. Przechodzimy do zakładki (A1) Broken access control i wybieramy Hijack a session.
+
+3. W HTTP history musimy odszukać żądanie które zawiera ciasteczka <script>hijack_cookie</script> i przesłać je do sequencera
+   <br> ![App Screenshot](https://snipboard.io/DS8f1Q.jpg)
+
+4. W sequencerze za pomocą live capture generujemy kilkadziesiąt/kilkaset tokenów i zapisujemy je do pliku tekstowego
+
+5. Możemy zauważyć, że klucze są podzielone na dwie części, a ich wartości nie są losowe - pierwsza część jest czymś w rodzaju numeru użytkownika, a druga przypomina timestamp.
+   <br> ![App Screenshot](https://snipboard.io/OLf5ph.jpg)
+
+6. Żeby przeprowadzić atak brutalny należy przesłać zapytanie z ciasteczkiem <code>hijack_cookie</code> do intrudera i metodą prób i błędów próbować znaleźć token używany przez innego użytkownika.
+Jeśli w zapytaniu nie przesyłane jest ciasteczko <code>hijack_cookie</code>, to trzeba jeszcze raz wysłać formularz.
+Do znalezienia klucza potrzeba troche szczęścia, raczej nie znajdziecie go przy pierwszej próbie ataku.
