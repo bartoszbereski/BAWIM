@@ -49,7 +49,7 @@ Po uruchomieniu tego kodu powiniśmy otrzymać status, że zadanie zostało wyko
 - content type
 - parametry 
 ```html
-	<html>
+<html>
 	<form action=http://localhost:{NUMER_PORTU}/WebGoat/csrf/review method=post enctype='application/x-www-form-urlencoded; charset=UTF-8'>
 		<input name='pierwszy_parametr' value='dowolna_wartosc' type='hidden'> 
 		<input name='drugi_parametr' value='dowolna_wartosc' type='hidden'> 
@@ -92,8 +92,8 @@ Po uruchomieniu tego kodu powiniśmy otrzymać status, że zadanie zostało wyko
 
 2. Przechodzimy do zakładki (A1) Broken access control i wybieramy Hijack a session.
 
-3. W HTTP history musimy odszukać żądanie które zawiera ciasteczka <script>hijack_cookie</script> i przesłać je do sequencera
-   <br> ![App Screenshot](https://snipboard.io/DS8f1Q.jpg)
+3. W HTTP history musimy odszukać żądanie które zawiera ciasteczka <code>hijack_cookie</code> i przesłać je do sequencera
+   <br> ![App Screenshot](https://snipboard.io/LsNziA.jpg)
 
 4. W sequencerze za pomocą live capture generujemy kilkadziesiąt/kilkaset tokenów i zapisujemy je do pliku tekstowego
 
