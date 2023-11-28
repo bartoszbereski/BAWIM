@@ -1,19 +1,19 @@
 
 ## INSTALACJA 
 
-Na początku musimy pobrać repozytorium na którym znajduje się nasze oprogramowanie WebGoat którego będziemy używać.
+Będziemy korzystać z aplikacji WebGoat link do repozytorium znajduję się poniżej
 
   https://github.com/WebGoat/WebGoat
 
-Dodatkowo będziemy potrzebowali dockera 
+Dodatkowo będziemy potrzebowali dockera i burpa
 
   https://www.docker.com/products/docker-desktop/
-  https://www.apachefriends.org/pl/download.html
+  https://portswigger.net/burp/releases/professional-community-2023-10-3-6?requestededition=community&requestedplatform=
 
 Po instalacji wszystkich 3 rzeczy możemy przejść do części praktycznej naszego projektu. 
 ### URUCHOMIENIE WEBGOAT
 ```bash
-  docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 webgoat/webgoat
+  docker run -it -p 127.0.0.1:8888:8080 -p 127.0.0.1:9090:9090 webgoat/webgoat
 ```
   W przypadku jakichś problemów z uruchomieniem kontenera możemy spróbować uruchomić go na innym porcie, należy zapamiętać ten port gdyż będzie on wykorzystywany  w dalszej części.
 
