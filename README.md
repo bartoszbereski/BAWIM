@@ -5,7 +5,7 @@ Na początku musimy pobrać repozytorium na którym znajduje się nasze oprogram
 
   https://github.com/WebGoat/WebGoat
 
-Dodatkowo będziemy potrzebowali dockera i xamppa 
+Dodatkowo będziemy potrzebowali dockera 
 
   https://www.docker.com/products/docker-desktop/
   https://www.apachefriends.org/pl/download.html
