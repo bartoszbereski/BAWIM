@@ -8,6 +8,7 @@ Będziemy korzystać z aplikacji WebGoat link do repozytorium znajduję się pon
 Dodatkowo będziemy potrzebowali dockera i burpa
 
   https://www.docker.com/products/docker-desktop/
+  
   https://portswigger.net/burp/releases/professional-community-2023-10-3-6?requestededition=community&requestedplatform=
 
 Po instalacji wszystkich 3 rzeczy możemy przejść do części praktycznej naszego projektu. 
